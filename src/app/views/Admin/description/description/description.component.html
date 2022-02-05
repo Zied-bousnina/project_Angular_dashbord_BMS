@@ -1,0 +1,41 @@
+<fieldset>
+    <legend>{{device[0].name}}</legend>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Signal</th>
+                <th scope="col">Range</th>
+                <th scope="col">H_Scale</th>
+                <th scope="col">L_Scale</th>
+                <th scope="col">Unit</th>
+                <th scope="col">Précision</th>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="table-active" *ngFor="let item of description">
+                <th scope="row">1</th>
+                <td> {{item.Name}} </td>
+                <td> {{item.Type}} </td>
+                <td> {{item.signal}} </td>
+                <td> {{item.Range}} </td>
+                <td> {{item.H_Scale}} </td>
+                <td> {{item.L_Scale}} </td>
+                <td> {{item.Unit}} </td>
+                <td> {{item.Precision|number:'1.0-0'}} </td>
+                <!-- <td> {{item._id}} </td> -->
+
+                <!-- <td> <button (click)="delete(item._id)"><i class="fas fa-user-slash"></i></button> </td>
+              <td>
+                  <a (click)="update(item._id)"> <i class="fas fa-user-edit"></i></a>
+              </td> -->
+            </tr>
+
+
+        </tbody>
+    </table>
+</fieldset>

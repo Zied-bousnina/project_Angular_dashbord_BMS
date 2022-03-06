@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Admin } from '../classes/admin';
+import { Device } from '../classes/device';
+import { DescriptionDevice } from '../classes/description-device';
 
 @Injectable({
   providedIn: 'root'
@@ -27,6 +29,12 @@ export class ServiceService {
 
   auth(t:boolean){
     this.isadmin =t
+
+  }
+  add(device:DescriptionDevice, dev:Device){
+    this.devices.push({id:this.devices[this.devices.length -1].id+1,name:dev.name})
+    this.desciption.push({id_device:this.devices[this.devices.length -1].id,Name:device.Name, Type:device.Type,signal:device.signal,Range:device.Range,H_Scale:device.H_Scale,L_Scale:device.L_Scale,Unit:device.Unit,Precision:device.Precision })
+
 
   }
 }

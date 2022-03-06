@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { NewDeviceRoutingModule } from './new-device-routing.module';
 import { NewDevicesComponent } from './new-devices/new-devices.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -11,7 +12,10 @@ import { NewDevicesComponent } from './new-devices/new-devices.component';
   ],
   imports: [
     CommonModule,
-    NewDeviceRoutingModule
+    NewDeviceRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ]
 })
 export class NewDeviceModule { }

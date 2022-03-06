@@ -1,1 +1,50 @@
-<p>new-devices works!</p>
+<fieldset>
+    <legend>Add device</legend>
+    <form>
+        <H1>device </H1>
+        <div class="form-group">
+            <label for="exampleInputEmail1">Name of device :</label>
+            <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Monitor ..." [(ngModel)]="dev.name">
+        </div>
+        <fieldset>
+            <legend>Description </legend>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Name :</label>
+                <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="" [(ngModel)]="newDevice.Name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Type</label>
+                <input type="text" class="form-control" name="Type" placeholder="Type" [(ngModel)]="newDevice.Type">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Signal</label>
+                <input type="text" class="form-control" name="Signal" placeholder="signal" [(ngModel)]="newDevice.signal">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Range</label>
+                <input type="text" class="form-control" name="Range" placeholder="Type" [(ngModel)]="newDevice.Range">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">H_Scale</label>
+                <input type="text" class="form-control" name="H_Scale" placeholder="Type" [(ngModel)]="newDevice.H_Scale">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">L_Scale</label>
+                <input type="text" class="form-control" name="L_Scale" placeholder="Type" [(ngModel)]="newDevice.L_Scale">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Unit</label>
+                <input type="text" class="form-control" name="Unit" placeholder="Type" [(ngModel)]="newDevice.Unit">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Precision</label>
+                <input type="text" class="form-control" name="Precision" placeholder="Type" [(ngModel)]="newDevice.Precision">
+            </div>
+            <div class="form-group form-check">
+
+            </div>
+        </fieldset>
+        <button type="submit" class="btn btn-primary" (click)="add(newDevice,dev)">Submit</button>
+    </form>
+</fieldset>

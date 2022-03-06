@@ -7,8 +7,8 @@ import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.compon
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
-  {path:"", component:FrontLayoutComponent},
-  {path:"login", component:LoginComponent},
+  // {path:"", component:FrontLayoutComponent},
+  {path:"", component:LoginComponent},
   {path:"admin", component:AdminLayoutComponent, canActivate:[AuthGuard],children:[
     {path:"",loadChildren:()=>import('./views/Admin/front-admin/front-admin.module').then(m=>m.FrontAdminModule)},
     {path:"scan",loadChildren:()=>import('./views/Admin/scan-devices/scan-devices.module').then(m=>m.ScanDevicesModule)},
